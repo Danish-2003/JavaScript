@@ -1,7 +1,7 @@
 const prompt = require("prompt-sync")()
 
 let SnakeWaterGun = ()=>{
-    let guesses = ['snake','water','gun']
+    let guesses = ['stone','paper','scissor']
     let CompGUess =  Math.floor(Math.random()*3)
     return guesses[CompGUess];
 } 
@@ -10,15 +10,16 @@ let tryAgain = true;
 while(tryAgain){
 let theGUess = SnakeWaterGun();
 
-let userguess = prompt("Guess One = (Snake,Water,Gun) ").toLowerCase();
+let userguess = prompt("Guess One = (stone,paper,scissor) ").toLowerCase();
 if(userguess==theGUess){
     console.log("Ahh Its a tie !")
 }
-else if(userguess==='snake'&&theGUess==='water'||userguess==='gun'&&theGUess==='snake'||userguess==='water'&&theGUess==='gun'){
+else if(userguess==='stone'&&theGUess==='scissor'||userguess==='scissor'&&theGUess==='paper'||userguess==='paper'&&theGUess==='stone'){
     console.log("You Win !")
+}else if (userguess===theGUess){
+    console.log("it's tie")
 }else{
-    console.log("You Loose!")
-}
+    console.log("you loose !")
 let playAgainButton = prompt("Want to Play Again ? ").toLowerCase();
 if(playAgainButton ==="yes"){
     tryAgain = true;
