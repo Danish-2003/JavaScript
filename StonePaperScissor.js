@@ -1,6 +1,6 @@
 const prompt = require("prompt-sync")()
 
-let SnakeWaterGun = ()=>{
+let StonePaperScissor = ()=>{
     let guesses = ['stone','paper','scissor']
     let CompGUess =  Math.floor(Math.random()*3)
     return guesses[CompGUess];
@@ -8,7 +8,7 @@ let SnakeWaterGun = ()=>{
 let tryAgain = true;
 
 while(tryAgain){
-let theGUess = SnakeWaterGun();
+let theGUess = StonePaperScissor();
 
 let userguess = prompt("Guess One = (stone,paper,scissor) ").toLowerCase();
 if(userguess==theGUess){
