@@ -1,0 +1,188 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    box-sizing: border-box;
+}
+
+.mainBox {
+    min-height: 100vmin;
+    min-width: 100vmin;
+    display: flex;
+    flex-wrap: wrap;
+    grid-template-columns: 50% 50%;
+    background: rgb(15,61,143);
+    background: linear-gradient(130deg, rgba(15,61,143,1) 37%, rgba(15,0,1,1) 98%); 
+    background-size:cover;
+    background-repeat: repeat-x;
+    padding-left: 10vmin;
+
+}
+
+.mainText {
+    background-color: #ffffff;
+    position: absolute;
+    top: 10vmin;
+    left: 10vmin;
+    display: flex;
+    flex-direction: column;
+    padding: 10vmin 0vmin;
+    border-radius: 10px;
+}
+
+.mainBox .mainText h2 {
+    color: #251782;
+    margin-left: 6vmin;
+}
+
+.serchBox {
+    margin-bottom: 5vmin;
+}
+
+.serchBox .todo-input {
+    margin-top: 3vmin;
+    background-color: #e0dfe0;
+    height: 5vmin;
+    width: 30vmin;
+    border-radius: 20px;
+    border: none;
+    padding-left: 5vmin;
+    color: #181818;
+    font-size: 2.5vmin;
+    outline: none;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    margin-left: 5vmin;
+}
+
+.todo-time {
+    background-color: #e6e0e0;
+    height: 5vmin;
+    margin-left: -20px;
+    border: none;
+    font-size: 2.5vmin;
+    padding: 0 8px;
+    border-radius: 20px;
+    color: #3e3e3e;
+    outline: none;
+}
+
+
+.serchBox button {
+    background-color: #b72e2e;
+    color: #ffffff;
+    height: 5vmin;
+    margin-left: 6vmin;
+    margin-right: 6vmin;
+    font-size: 2.5vmin;
+    border: none;
+    font-weight: bold;
+    border-radius: 20px;
+    width: 10vmin;
+    padding-bottom: 2px;
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+.serchBox button:active {
+    background-color: #979d9d;
+    color: rgb(255, 85, 85);
+}
+
+.todoList {
+    display: flex;
+    justify-content: center;
+    height: 20vmin;
+    width: 100%;
+}
+
+
+
+.todo-container {
+
+    display: flex;
+    flex-direction: column;
+    gap: 2vmin;
+    color: #4a4a4a;
+    margin-left: 10vmin;
+}
+
+.todo-container-item {
+    display: grid;
+    grid-template-columns: 20vmin 18.5vmin 5vmin;
+    width: 45vmin;
+    margin-right: 7vmin;
+}
+
+.container-button {
+    background-color: #0f3d8f;
+    color: #ffffff;
+    height: 5vmin;
+    margin-left: 6px;
+    font-size: 2.5vmin;
+    border: none;
+    font-weight: bold;
+    border-radius: 20px;
+    width: 10vmin;
+    padding-bottom: 2px;
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+.quote h1{
+    line-height: 7vmin;
+}
+.quote{
+    position:absolute;
+    left: 90vmin;
+    top: 20vmin;
+    width: 55vmin;
+    font-size: 3vmin;
+    color: white;
+}
+
+.quote-span{
+    font-weight: 900;
+    font-size: 10vmin;
+    color: #b72e2e;
+}
+
+
+
+
+@media (max-width: 768px) {
+    .mainBox {
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        align-items: center;
+        padding-left: 0;
+        
+    }
+
+    .mainText {
+        position: relative;
+        top: 5vmin;
+        left: auto;
+        padding: 5vmin 2vmin;
+        width: 80vmin;
+        margin-bottom: 10vmin;
+        align-items: center;
+        font-size: small;
+    }
+
+    .todo-container {
+        align-items: center;
+        width: 80vmin;
+    }
+
+    .quote {
+        position: relative;
+        left: 0;
+        top: 0;
+        width: 80vmin;
+        font-size: 3vmin;
+        margin-top: 5vmin;
+        text-align: center;
+    }
+}
